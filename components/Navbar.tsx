@@ -49,8 +49,6 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-right">
-          <span className="nav-phone">727-598-0202</span>
-          <button className="nav-cta">Get Assessment →</button>
         </div>
 
         <button
@@ -71,8 +69,6 @@ export default function Navbar() {
         {links.map((l) => (
           <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
         ))}
-        <div className="mobile-phone">727-598-0202</div>
-        <button className="btn-green" onClick={close}>Get Assessment →</button>
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import ScrollAnimator from '@/components/ScrollAnimator';
 
@@ -57,64 +56,42 @@ export default function Home() {
       {/* ═══ HERO ═══ */}
       <section className="hero">
         <div className="hero-left">
-          <div className="hero-urgency">
-            <span className="urgency-pulse" />
-            Offer Valid Through July 2, 2026
-          </div>
-          <h1>
-            Roof + Solar +<br />Tax Incentives.<br /><em>Zero Cost</em> to You.
-          </h1>
-          <p className="hero-desc">
-            Tesio Energy helps industrial partners finance sustainability projects through federal
-            and state incentive programs. We combine premium roof retrofits with solar installations
-            and a 40% Investment Tax Credit to turn aging roofs into profit centers — at no upfront cost.
-          </p>
-          <div className="hero-pillrow">
-            <div className="h-pill"><span className="pill-dot dot-g" />Premium Roofing</div>
-            <div className="h-pill"><span className="pill-dot dot-a" />Solar Systems</div>
-            <div className="h-pill"><span className="pill-dot dot-t" />Tax Incentives</div>
-          </div>
-          <div className="hero-btns">
-            <button className="btn-green">Schedule Portfolio Assessment →</button>
-            <button className="btn-ol">View Case Study</button>
+          <div className="hero-content">
+            <div className="hero-badge">
+              <span className="badge-line" />
+              <span>Commercial Roof + Solar</span>
+            </div>
+            <h1>
+              Roof + Solar +<br />
+              <span className="h1-accent">Tax Incentives</span>
+            </h1>
+            <p className="hero-desc">
+              We combine premium roof retrofits with solar installations
+              and a 40% Investment Tax Credit to turn aging roofs into profit centers.
+            </p>
+            <div className="hero-pillrow">
+              <div className="h-pill"><span className="pill-dot dot-g" />Premium Roofing</div>
+              <div className="h-pill"><span className="pill-dot dot-a" />Solar Systems</div>
+              <div className="h-pill"><span className="pill-dot dot-t" />Tax Incentives</div>
+            </div>
+            <div className="hero-btns">
+              <button className="btn-ghost">View Case Study</button>
+            </div>
           </div>
         </div>
         <div className="hero-right">
-          <Image
+          <img
             src="/Flat_roof_BLDG.png"
             alt="Commercial flat roof building — ideal for solar retrofit"
-            fill
             className="hero-img"
-            priority
           />
-          <div className="hero-overlay" />
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <div className="hs-value">$44M</div>
-              <div className="hs-label">Free Cash Flow</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hs-value">40% <small>ITC</small></div>
-              <div className="hs-label">Tax Credit</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hs-value amber">30 <small>yr</small></div>
-              <div className="hs-label">Roof Extension</div>
-            </div>
-          </div>
+         
         </div>
       </section>
-
-      <div className="urgency-bar">
-        Tax incentive window is closing — commit by{' '}
-        <span className="countdown-chip">JULY 2, 2026</span>{' '}
-        to safe harbor 40% ITC + 100% Bonus Depreciation
-      </div>
 
       {/* ═══ SERVICES ═══ */}
       <section className="services" id="services">
         <div className="svc-header anim">
-          <div className="sec-label">What We Do</div>
           <h2 className="sec-h2">One Partner. Full-Spectrum<br />Energy Solutions.</h2>
           <p className="sec-sub">
             We bring funding opportunities and conduct on-site studies at no upfront cost. Our team
@@ -154,12 +131,10 @@ export default function Home() {
       <section className="problem" id="problem">
         <div className="problem-top anim">
           <div>
-            <div className="sec-label">The Problem</div>
-            <h2 className="sec-h2">Fragmented Solutions<br />= Missed Value</h2>
+          
+            <h2 className="sec-h2">Fragmented Solutions = Missed Value</h2>
           </div>
-          <p className="sec-sub">
-            Siloed approaches lead to delays, missed incentives, and lost portfolio value for asset owners.
-          </p>
+         
         </div>
         <div className="problem-grid">
           <div className="prob-card anim">
@@ -196,10 +171,6 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="problem-callout anim">
-          <strong>Result:</strong> Asset owners manage multiple vendors, face higher costs, delayed
-          execution, and leave millions in incentives unrealized.
-        </div>
       </section>
 
       {/* ═══ SOLUTION ═══ */}
@@ -207,13 +178,9 @@ export default function Home() {
         <div className="sol-card anim">
           <div className="sol-top">
             <div>
-              <div className="sec-label">One Integrated Solution</div>
-              <h2 className="sec-h2">Unlock 30 Years of Value with Tax Benefits + Financing</h2>
+              <h2 className="sec-h2">Unlock Value with Roof, Solar & Tax Incentives</h2>
             </div>
-            <div className="sol-top-right">
-              <p>Combine a roofing upgrade with solar, unlocking federal incentives that fund the entire project.</p>
-              <div className="itc-badge">40% ITC + 100% Bonus Depreciation</div>
-            </div>
+         
           </div>
           <div className="sol-flow">
             <div className="sol-step">
@@ -264,7 +231,7 @@ export default function Home() {
       {/* ═══ FINANCIALS ═══ */}
       <section className="financial" id="financial">
         <div className="fin-header anim">
-          <div className="sec-label">Financial Model</div>
+        
           <h2 className="sec-h2">$100M Project Example</h2>
           <p className="sec-sub">
             4 million sq. ft. of existing roof retrofitted with FiberTite &amp; Solar. 6% interest, 0% down payment.
@@ -295,7 +262,7 @@ export default function Home() {
           </div>
         </div>
         <div className="fcf-card anim">
-          <div className="sec-label">Net Free Cash Flow</div>
+          
           <div className="fcf-num">$44M</div>
           <div className="fcf-sub">in tax benefits that can be sold</div>
           <p className="fcf-desc">
@@ -308,7 +275,7 @@ export default function Home() {
       {/* ═══ BEFORE / AFTER ═══ */}
       <section className="transform">
         <div style={{ textAlign: 'center' }} className="anim">
-          <div className="sec-label">The Transformation</div>
+         
           <h2 className="sec-h2">From Cost Center to Profit Center</h2>
         </div>
         <div className="transform-grid">
@@ -339,7 +306,7 @@ export default function Home() {
       {/* ═══ CASE STUDY ═══ */}
       <section className="casestudy" id="casestudy">
         <div className="anim">
-          <div className="sec-label">Proof of Concept</div>
+        
           <h2 className="sec-h2">Our Integrated Model in Action</h2>
         </div>
         <div className="cs-layout">
@@ -484,12 +451,12 @@ export default function Home() {
         </div>
         <div className="team-grid">
           {[
-            { initials: 'RP', av: 'av-1', name: 'Randy Perry', role: 'Partner', bio: '10+ years in corporate project management and tax consulting. Master\'s in International Accounting from University of London. Leads on-site execution and financial ROI presentations.' },
-            { initials: 'NB', av: 'av-2', name: 'Nicole Bouquet', role: 'Advisor — Sustainability', bio: 'Former Senior Director, Sustainability Transaction Group. Supported ESG investments for Walmart, Disney, Dollar Tree, Bank of America, and WaWa. Oversees sustainable vision.' },
-            { initials: 'MS', av: 'av-3', name: 'Mark Shirah', role: 'Partner — Power Quality', bio: '35+ years in power quality engineering. One of 138 Certified Power Quality experts worldwide. Teaches power quality thermology at WKU.' },
+            { img: '/Randy Headshot.jpg', name: 'Randy Perry', role: 'Partner', bio: '10+ years in corporate project management and tax consulting. Master\'s in International Accounting from University of London. Leads on-site execution and financial ROI presentations.' },
+            { img: '/Ben Pauluhn.jpg', name: 'Ben Pauluhn', role: 'President — Optimus Energy Solutions', bio: 'Ben is passionate about the Solar, EV, and other Energy Efficiency industries. He has built his career serving others through many business and non-profit ventures and is humbled by the opportunity to educate businesses on the future of renewable energy solutions.' },
+            { img: '/Rick Mariucci.jpg', name: 'Rick Mariucci', role: 'Senior Project Manager — Optimus Energy Solutions', bio: 'Rick draws on a career in construction-based customer-service to bring projects to life. Rick leads project implementation throughout Florida, Georgia, and Tennessee. His client-first approach and commitment to quality ensure projects are brought to life that ensure longevity and transparency.' },
           ].map((m) => (
             <div key={m.name} className="team-card anim">
-              <div className={`team-avatar ${m.av}`}>{m.initials}</div>
+              <img src={m.img} alt={m.name} className="team-avatar" />
               <h3>{m.name}</h3>
               <div className="team-role">{m.role}</div>
               <p className="team-bio">{m.bio}</p>
@@ -534,15 +501,14 @@ export default function Home() {
         <h2>Ready to Transform<br />Your <em>Portfolio</em>?</h2>
         <p>
           Don&apos;t leave millions in tax incentives on the table. Let TESIO Energy turn your aging
-          roofs into revenue-generating assets — at zero cost to you.
+          roofs into revenue-generating assets.
         </p>
         <div className="cta-contact">
           Randy Perry · <a href="tel:7275980202">727-598-0202</a> ·{' '}
           <a href="mailto:randy@tesioenergy.com">randy@tesioenergy.com</a>
         </div>
         <div className="cta-btns">
-          <button className="btn-green">Schedule Your Assessment →</button>
-          <button className="btn-ol">Download Pitch Deck</button>
+    
         </div>
       </section>
 
