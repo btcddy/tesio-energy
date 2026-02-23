@@ -56,9 +56,7 @@ export default function Home() {
 
       {/* ═══ HERO ═══ */}
       <section className="hero">
-        <div className="hero-left">
-          
-        
+        <div className="hero-left">     
           <h1>
             Roof + Solar +<br />Tax Incentives<br />
           </h1>
@@ -91,7 +89,6 @@ export default function Home() {
       {/* ═══ SERVICES ═══ */}
       <section className="services" id="services">
         <div className="svc-header anim">
-          <div className="sec-label">What We Do</div>
           <h2 className="sec-h2">One Partner. Full-Spectrum<br />Energy Solutions.</h2>
           <p className="sec-sub">
             We bring funding opportunities and conduct on-site studies at no upfront cost. Our team
@@ -115,11 +112,6 @@ export default function Home() {
             <p>ITC, bonus depreciation, and tax equity planning to maximize financial returns.</p>
           </div>
           <div className="svc-card anim">
-            <div className="icon-box ib-gl"><IconDoc /></div>
-            <h3>USDA Grants</h3>
-            <p>REAP grants up to $1.5M for rural manufacturers. Full application management.</p>
-          </div>
-          <div className="svc-card anim">
             <div className="icon-box ib-nl"><IconBolt /></div>
             <h3>Energy Upgrades</h3>
             <p>Chillers, boilers, compressors, motors, fans and lighting — cutting 20–30% energy waste.</p>
@@ -131,7 +123,6 @@ export default function Home() {
       <section className="problem" id="problem">
         <div className="problem-top anim">
           <div>
-            <div className="sec-label">The Problem</div>
             <h2 className="sec-h2">Fragmented Solutions<br />= Missed Value</h2>
           </div>
           <p className="sec-sub">
