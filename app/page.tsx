@@ -56,13 +56,18 @@ export default function Home() {
 
       {/* ═══ HERO ═══ */}
       <section className="hero">
-        <div className="hero-left">     
+        <div className="hero-left">
+          <div className="hero-urgency">
+            <span className="urgency-pulse" />
+            Offer Valid Through July 2, 2026
+          </div>
           <h1>
-            Roof + Solar +<br />Tax Incentives<br />
+            Roof + Solar +<br />Tax Incentives.<br /><em>Zero Cost</em> to You.
           </h1>
           <p className="hero-desc">
-            Tesio Energy combines premium roof retrofits with solar installations
-            and a 40% Investment Tax Credit to turn aging roofs into profit centers.
+            Tesio Energy helps industrial partners finance sustainability projects through federal
+            and state incentive programs. We combine premium roof retrofits with solar installations
+            and a 40% Investment Tax Credit to turn aging roofs into profit centers — at no upfront cost.
           </p>
           <div className="hero-pillrow">
             <div className="h-pill"><span className="pill-dot dot-g" />Premium Roofing</div>
@@ -70,7 +75,7 @@ export default function Home() {
             <div className="h-pill"><span className="pill-dot dot-t" />Tax Incentives</div>
           </div>
           <div className="hero-btns">
-
+            <button className="btn-green">Schedule Portfolio Assessment →</button>
             <button className="btn-ol">View Case Study</button>
           </div>
         </div>
@@ -82,13 +87,34 @@ export default function Home() {
             className="hero-img"
             priority
           />
+          <div className="hero-overlay" />
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <div className="hs-value">$44M</div>
+              <div className="hs-label">Free Cash Flow</div>
+            </div>
+            <div className="hero-stat">
+              <div className="hs-value">40% <small>ITC</small></div>
+              <div className="hs-label">Tax Credit</div>
+            </div>
+            <div className="hero-stat">
+              <div className="hs-value amber">30 <small>yr</small></div>
+              <div className="hs-label">Roof Extension</div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <div className="urgency-bar">
+        Tax incentive window is closing — commit by{' '}
+        <span className="countdown-chip">JULY 2, 2026</span>{' '}
+        to safe harbor 40% ITC + 100% Bonus Depreciation
+      </div>
 
       {/* ═══ SERVICES ═══ */}
       <section className="services" id="services">
         <div className="svc-header anim">
+          <div className="sec-label">What We Do</div>
           <h2 className="sec-h2">One Partner. Full-Spectrum<br />Energy Solutions.</h2>
           <p className="sec-sub">
             We bring funding opportunities and conduct on-site studies at no upfront cost. Our team
@@ -112,6 +138,11 @@ export default function Home() {
             <p>ITC, bonus depreciation, and tax equity planning to maximize financial returns.</p>
           </div>
           <div className="svc-card anim">
+            <div className="icon-box ib-gl"><IconDoc /></div>
+            <h3>USDA Grants</h3>
+            <p>REAP grants up to $1.5M for rural manufacturers. Full application management.</p>
+          </div>
+          <div className="svc-card anim">
             <div className="icon-box ib-nl"><IconBolt /></div>
             <h3>Energy Upgrades</h3>
             <p>Chillers, boilers, compressors, motors, fans and lighting — cutting 20–30% energy waste.</p>
@@ -123,6 +154,7 @@ export default function Home() {
       <section className="problem" id="problem">
         <div className="problem-top anim">
           <div>
+            <div className="sec-label">The Problem</div>
             <h2 className="sec-h2">Fragmented Solutions<br />= Missed Value</h2>
           </div>
           <p className="sec-sub">
@@ -341,29 +373,101 @@ export default function Home() {
       <section className="partners" id="partners">
         <div className="partners-header anim">
           <div className="sec-label">Partner Ecosystem</div>
-          <h2 className="sec-h2">Trusted Partners Powering<br />One Integrated Solution</h2>
+          <h2 className="sec-h2">One Integrated Solution.<br />Five Expert Partners.</h2>
           <p className="sec-sub">
-            Together, our partners eliminate critical barriers and deliver a scalable, bankable
-            solution for your portfolio.
+            Every partner solves a critical piece. TESIO connects them into a single,
+            seamless delivery — so you deal with one team, not five vendors.
           </p>
         </div>
-        <div className="partner-grid">
-          {[
-            { name: 'FiberTite®', role: 'Roof Systems', desc: '30+ year durability. Global brand reputation in commercial roofing membranes.' },
-            { name: 'Panelclaw', role: 'Solar Racking', desc: 'Lightest flat-roof racking. Ultra-fast installation & simplified maintenance.' },
-            { name: 'Anchor Products', role: 'Solar Anchoring', desc: 'Roof-safe anchoring. Reduces load by 50% & integrates with warranty.' },
-            { name: 'Amicus Solar', role: 'Solar EPCs', desc: 'Cooperative of top-tier EPCs. Quality, safety & reputable deployment.' },
-          ].map((p) => (
-            <div key={p.name} className="partner-card anim">
-              <div className="p-logo">{p.name}</div>
-              <div className="p-role">{p.role}</div>
-              <p className="p-desc">{p.desc}</p>
+
+        <div className="partner-hub anim">
+          {/* Center — TESIO */}
+          <div className="hub-center">
+            <div className="hub-ring" />
+            <div className="hub-core">
+              <div className="hub-logo">TESIO</div>
+              <div className="hub-role">Your Single Point of Contact</div>
+              <p className="hub-desc">Tax equity planning, partner coordination, and project management. One call handles everything.</p>
             </div>
-          ))}
-          <div className="partner-card tesio anim">
-            <div className="p-logo" style={{ color: 'var(--green-glow)' }}>TESIO</div>
-            <div className="p-role">Single Point of Contact</div>
-            <p className="p-desc">Tax equity planning &amp; partner coordination. One contact for seamless delivery.</p>
+          </div>
+
+          {/* Spokes */}
+          <div className="hub-spokes">
+            <div className="spoke spoke-tl">
+              <div className="spoke-line" />
+              <div className="spoke-card">
+                <div className="spoke-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>
+                </div>
+                <div className="spoke-name">FiberTite®</div>
+                <div className="spoke-what">Roof Systems</div>
+                <p className="spoke-detail">30+ year membranes. No tear-off required.</p>
+              </div>
+            </div>
+
+            <div className="spoke spoke-tr">
+              <div className="spoke-line" />
+              <div className="spoke-card">
+                <div className="spoke-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m-8-10H4m16 0h2"/></svg>
+                </div>
+                <div className="spoke-name">Panelclaw</div>
+                <div className="spoke-what">Solar Racking</div>
+                <p className="spoke-detail">Lightest flat-roof system. Ultra-fast install.</p>
+              </div>
+            </div>
+
+            <div className="spoke spoke-bl">
+              <div className="spoke-line" />
+              <div className="spoke-card">
+                <div className="spoke-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div className="spoke-name">Anchor Products</div>
+                <div className="spoke-what">Solar Anchoring</div>
+                <p className="spoke-detail">50% less load. Warranty-integrated.</p>
+              </div>
+            </div>
+
+            <div className="spoke spoke-br">
+              <div className="spoke-line" />
+              <div className="spoke-card">
+                <div className="spoke-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div className="spoke-name">Amicus Solar</div>
+                <div className="spoke-what">Solar EPCs</div>
+                <p className="spoke-detail">Top-tier EPC cooperative. Trusted deployment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Integration summary strip */}
+        <div className="partner-flow anim">
+          <div className="pf-step">
+            <div className="pf-num">1</div>
+            <div className="pf-text"><strong>FiberTite</strong> lays the foundation</div>
+          </div>
+          <div className="pf-arrow">→</div>
+          <div className="pf-step">
+            <div className="pf-num">2</div>
+            <div className="pf-text"><strong>Anchor</strong> secures the mount points</div>
+          </div>
+          <div className="pf-arrow">→</div>
+          <div className="pf-step">
+            <div className="pf-num">3</div>
+            <div className="pf-text"><strong>Panelclaw</strong> racks the panels</div>
+          </div>
+          <div className="pf-arrow">→</div>
+          <div className="pf-step">
+            <div className="pf-num">4</div>
+            <div className="pf-text"><strong>Amicus</strong> installs &amp; commissions</div>
+          </div>
+          <div className="pf-arrow">→</div>
+          <div className="pf-step pf-tesio">
+            <div className="pf-num">✓</div>
+            <div className="pf-text"><strong>TESIO</strong> manages it all</div>
           </div>
         </div>
       </section>
