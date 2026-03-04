@@ -136,12 +136,14 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 14px 56px;
   background: rgba(15,25,35,0.92);
   backdrop-filter: blur(28px) saturate(160%);
   border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: justify-content 0s;
 }
+.nav-scrolled { justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 12px; }
 .logo-glyph svg { width: 34px; height: 34px; }
 .logo-name {
@@ -160,7 +162,22 @@ nav {
   font-weight: 600;
   margin-top: 1px;
 }
-.nav-links { display: flex; gap: 32px; list-style: none; }
+
+/* Nav links — hidden and out of flow by default, shown when scrolled past hero */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+.nav-scrolled .nav-links {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
 .nav-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
@@ -190,7 +207,21 @@ nav {
   color: var(--green-glow);
   text-shadow: 0 0 18px rgba(61,217,98,0.6);
 }
-.nav-right { display: flex; align-items: center; gap: 20px; }
+
+/* Nav right — out of flow when not scrolled so logo stays centered */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.nav-scrolled .nav-right {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
 .nav-phone {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
@@ -295,7 +326,7 @@ nav {
 
 /* ═══ RESPONSIVE — SHARED ═══ */
 @media (max-width: 1024px) {
-  nav { padding: 14px 24px; }
+  nav { padding: 14px 24px; justify-content: space-between; }
   .nav-links { display: none; }
   .nav-phone { display: none; }
   .nav-cta { display: none; }

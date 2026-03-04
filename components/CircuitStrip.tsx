@@ -26,6 +26,10 @@ export default function CircuitStrip() {
 
       <div className="ct-center">
         <div className="ct-ring">
+          <div className="ct-ring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div className="ct-ring-title">Liquidity</div>
           <div className="ct-ring-num">$44M</div>
           <div className="ct-ring-label">Free Cash Flow</div>
         </div>
@@ -33,8 +37,7 @@ export default function CircuitStrip() {
 
       <div className="ct-card ct-card1">
         <div className="ct-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#3DD962" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m-8-10H4m16 0h2"/></svg>
-        </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg>        </div>
         <div className="ct-card-title">Solar Output</div>
         <div className="ct-card-val">35 MW</div>
         <div className="ct-card-sub">1,535 panels active</div>
@@ -51,11 +54,19 @@ export default function CircuitStrip() {
 
       <div className="ct-card ct-card3">
         <div className="ct-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1A9E8F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M12 10v4m-2-2h4"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M12 10v4m-2-2h4"/></svg>
         </div>
         <div className="ct-card-title">Tax Credits</div>
         <div className="ct-card-val">40% ITC</div>
         <div className="ct-card-sub">Safe harbored</div>
+      </div>
+     <div className="ct-card ct-card4">
+       <div className="ct-card-icon">
+         <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <div className="ct-card-title">Property Value</div>
+        <div className="ct-card-val">10%</div>
+        <div className="ct-card-sub">Appreciation</div>
       </div>
     </section>
   );

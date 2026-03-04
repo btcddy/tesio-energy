@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (open) {
@@ -15,19 +16,31 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        setScrolled(heroBottom <= 0);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const close = () => setOpen(false);
 
   const links = [
-  { label: 'Home', href: '#top' },
-  { label: 'Tax Credits', href: '#financial' },
-  { label: 'Energy Upgrades', href: '#services' },
-  { label: 'Projects', href: '#casestudy' },
-  { label: 'About Us', href: '#team' },
-];
+    { label: 'Home', href: '#top' },
+    { label: 'Tax Credits', href: '#financial' },
+    { label: 'Energy Upgrades', href: '#services' },
+    { label: 'Projects', href: '#casestudy' },
+    { label: 'About Us', href: '#team' },
+  ];
 
   return (
     <>
-      <nav>
+      <nav className={scrolled ? 'nav-scrolled' : ''}>
         <div className="nav-logo">
           <a href="#top">
             <Image

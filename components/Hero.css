@@ -39,15 +39,22 @@
   position: relative;
 }
 
-/* Top bar — dot + line + name */
+/* Top bar — expanded container */
 .hero-top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   align-self: flex-start;
-  gap: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-bottom: 48px;
   animation: fadeUp 0.6s ease both;
+}
+
+/* Top row — dot + line + name */
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .hero-dot {
   width: 12px;
@@ -68,7 +75,7 @@
   background: linear-gradient(90deg, var(--green-glow), transparent);
   flex-shrink: 0;
 }
-.hero-top-bar span {
+.hero-top-row span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
   font-weight: 600;
@@ -76,6 +83,38 @@
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
 }
+
+/* Hero nav links — x-position set by JS to match nav-links */
+.hero-nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.hero-nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+.hero-nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--green-glow);
+  transition: width 0.3s;
+  box-shadow: 0 0 8px rgba(61,217,98,0.4);
+}
+.hero-nav-links a:hover {
+  color: var(--green-glow);
+  text-shadow: 0 0 12px rgba(61,217,98,0.4);
+}
+.hero-nav-links a:hover::after { width: 100%; }
 
 /* Heading */
 .hero h1 {
@@ -165,13 +204,14 @@
 /* ── TABLET — max 1024px ── */
 @media (max-width: 1024px) {
   .hero { padding: 120px 32px 72px; min-height: auto; }
+  .hero-nav-links { display: none; }
 }
 
 /* ── MOBILE — max 640px ── */
 @media (max-width: 640px) {
   .hero { padding: 100px 20px 48px; min-height: auto; }
   .hero h1 { font-size: clamp(32px, 9vw, 48px); }
-  .hero-top-bar span { font-size: 14px; letter-spacing: 3px; }
+  .hero-top-row span { font-size: 14px; letter-spacing: 3px; }
   .hero-dot { width: 9px; height: 9px; }
   .hero-line { width: 28px; }
   .hero-top-bar { margin-bottom: 32px; }
@@ -187,7 +227,7 @@
 @media (max-width: 380px) {
   .hero { padding: 90px 14px 40px; }
   .hero h1 { font-size: 30px; }
-  .hero-top-bar span { font-size: 12px; letter-spacing: 2.5px; }
+  .hero-top-row span { font-size: 12px; letter-spacing: 2.5px; }
   .hero-dot { width: 7px; height: 7px; }
   .hero-line { width: 20px; }
   .hero-desc { font-size: 14px; }
