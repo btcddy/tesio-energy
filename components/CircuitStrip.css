@@ -1,0 +1,231 @@
+/* ═══ CIRCUIT TOPOLOGY STRIP ═══ */
+.circuit-strip {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0d151e, #131f2d);
+  height: 420px;
+}
+.circuit-strip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(45,181,78,0.06), transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Subtle grid */
+.ct-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px);
+}
+
+/* Trace lines */
+.ct-trace { position: absolute; background: rgba(61,217,98,0.06); pointer-events: none; }
+.ct-v { width: 1px; top: 0; height: 100%; }
+.ct-h { height: 1px; left: 0; width: 100%; }
+.ct-v1 { left: 25%; }
+.ct-v2 { left: 50%; }
+.ct-v3 { left: 75%; }
+.ct-h1 { top: 30%; }
+.ct-h2 { top: 60%; }
+
+/* Flowing pulses — vertical */
+.ct-pulse { position: absolute; border-radius: 4px; pointer-events: none; }
+.ct-pv {
+  width: 3px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--green-glow), transparent);
+  filter: blur(1px);
+  animation: ctPulseV 4s linear infinite;
+  opacity: 0;
+}
+.ct-pd2 { animation-delay: 1.2s; }
+.ct-pd3 { animation-delay: 2.4s; }
+@keyframes ctPulseV {
+  0% { top: -40px; opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Flowing pulses — horizontal */
+.ct-ph {
+  height: 3px;
+  width: 40px;
+  background: linear-gradient(90deg, transparent, var(--green-glow), transparent);
+  filter: blur(1px);
+  animation: ctPulseH 5s linear infinite;
+  opacity: 0;
+}
+.ct-pd4 { animation-delay: 0.6s; }
+.ct-pd5 { animation-delay: 1.8s; }
+@keyframes ctPulseH {
+  0% { left: -40px; opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* Junction nodes */
+.ct-jn {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(61,217,98,0.15);
+  border: 1.5px solid rgba(61,217,98,0.3);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+}
+.ct-jn::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(61,217,98,0.08);
+  animation: ctJnPing 3s ease-in-out infinite;
+}
+@keyframes ctJnPing {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.4); opacity: 0.8; }
+}
+.ct-jn1 { top: 30%; left: 25%; }
+.ct-jn2 { top: 30%; left: 50%; animation-delay: 0.5s; }
+.ct-jn3 { top: 30%; left: 75%; animation-delay: 1s; }
+.ct-jn4 { top: 60%; left: 25%; animation-delay: 0.8s; }
+.ct-jn5 { top: 60%; left: 50%; animation-delay: 0.3s; }
+.ct-jn6 { top: 60%; left: 75%; animation-delay: 1.2s; }
+.ct-jn2::after { animation-delay: 0.5s; }
+.ct-jn3::after { animation-delay: 1s; }
+.ct-jn4::after { animation-delay: 0.8s; }
+.ct-jn5::after { animation-delay: 0.3s; }
+.ct-jn6::after { animation-delay: 1.2s; }
+
+/* Center metric ring */
+.ct-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+.ct-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(61,217,98,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.ct-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px dashed rgba(61,217,98,0.08);
+  animation: ctRingSpin 20s linear infinite;
+}
+@keyframes ctRingSpin { to { transform: rotate(360deg); } }
+.ct-ring-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+.ct-ring-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-top: 4px;
+}
+
+/* Info cards */
+.ct-card {
+  position: absolute;
+  background: rgba(15,25,35,0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  z-index: 4;
+  min-width: 140px;
+  transition: all 0.4s;
+}
+.ct-card:hover {
+  border-color: rgba(61,217,98,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.ct-card1 { top: 10%; left: 5%; }
+.ct-card2 { bottom: 12%; left: 5%; }
+.ct-card3 { top: 10%; right: 5%; }
+
+.ct-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(61,217,98,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.ct-card-icon svg { width: 16px; height: 16px; }
+.ct-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.ct-card-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--green-glow);
+  margin-bottom: 2px;
+}
+.ct-card-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ── TABLET — max 1024px ── */
+@media (max-width: 1024px) {
+  .circuit-strip { height: 350px; }
+}
+
+/* ── MOBILE — max 640px ── */
+@media (max-width: 640px) {
+  .circuit-strip { height: 300px; }
+  .ct-card { padding: 14px 14px; min-width: 120px; }
+  .ct-card-val { font-size: 16px; }
+  .ct-card-title { font-size: 13px; }
+  .ct-ring { width: 100px; height: 100px; }
+  .ct-ring-num { font-size: 28px; }
+}
+
+/* ── SMALL MOBILE — max 380px ── */
+@media (max-width: 380px) {
+  .circuit-strip { height: 260px; }
+  .ct-card { display: none; }
+  .ct-ring { width: 90px; height: 90px; }
+  .ct-ring-num { font-size: 24px; }
+}

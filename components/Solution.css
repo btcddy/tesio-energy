@@ -1,0 +1,149 @@
+/* ═══ SOLUTION — SAND ═══ */
+.financial {
+  background: var(--sand);
+  padding: 110px 56px;
+  position: relative;
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
+}
+.financial::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(45,181,78,0.03), transparent 50%);
+}
+.sol-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 64px;
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--stone);
+}
+.sol-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(45,181,78,0.07), transparent);
+  border-radius: 50%;
+}
+.sol-top {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.sol-top .sec-label { color: var(--green-glow); }
+.sol-top .sec-h2 { color: var(--ink); max-width: 720px; margin: 0 auto; }
+.sol-top-right { text-align: right; flex-shrink: 0; }
+.sol-top-right p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+  max-width: 500px;
+  margin: 0 auto 16px;
+}
+.itc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(45,181,78,0.1);
+  border: 1px solid rgba(45,181,78,0.22);
+  border-radius: 100px;
+  padding: 9px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--green-glow);
+  letter-spacing: 0.8px;
+}
+.sol-flow {
+  display: grid;
+  grid-template-columns: 1fr 36px 1fr 36px 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.sol-step {
+  background: var(--sage);
+  border: 1.5px solid var(--sage-deep);
+  border-radius: 16px;
+  padding: 30px 24px;
+  transition: all 0.35s;
+  display: flex;
+  flex-direction: column;
+}
+.sol-step:hover {
+  background: var(--sage-deep);
+  transform: translateY(-4px);
+  border-color: rgba(45,181,78,0.2);
+}
+.sol-step h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--ink);
+  text-align: center;
+}
+.sol-step .icon-box { margin: 0 auto 18px; }
+.sol-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.sol-list li {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  padding-left: 16px;
+  position: relative;
+}
+.sol-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  opacity: 0.7;
+}
+.sol-impact { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--stone); text-align: center; }
+.sol-impact-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 3px;
+}
+.sol-impact-val { font-size: 15px; color: var(--ink-muted); }
+.sol-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 56px;
+  color: var(--stone);
+  font-size: 20px;
+}
+
+/* ── TABLET — max 1024px ── */
+@media (max-width: 1024px) {
+  .sol-card { padding: 40px 32px; }
+  .sol-top { flex-direction: column; }
+  .sol-top-right { text-align: left; }
+  .sol-top-right p { margin-left: 0; }
+  .sol-flow { grid-template-columns: 1fr; gap: 16px; }
+  .sol-arrow { display: none; }
+}
+
+/* ── MOBILE — max 640px ── */
+@media (max-width: 640px) {
+  .financial { padding: 52px 16px; }
+  .sol-card { padding: 24px 16px; }
+  .sol-step { padding: 20px 16px; }
+  .sol-step h3 { font-size: 19px; }
+  .sol-list li { font-size: 14px; }
+  .itc-badge { font-size: 14px; padding: 5px 10px; }
+  .sol-impact { padding: 10px 12px; }
+  .sol-impact-val { font-size: 12px; }
+}

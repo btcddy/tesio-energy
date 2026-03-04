@@ -1,0 +1,26 @@
+/* ═══ FOOTER ═══ */
+footer { padding: 44px 56px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--stone); background: var(--sand); }
+.f-left { display: flex; flex-direction: column; gap: 3px; }
+.f-brand { font-weight: 700; font-size: 15px; letter-spacing: 4px; text-transform: uppercase; color: var(--ink); }
+.f-addr { font-size: 14px; color: var(--ink-faint); }
+.f-addr a { color: var(--green); text-decoration: none; }
+.f-copy { font-size: 13px; color: var(--ink-faint); margin-top: 2px; }
+.f-links { display: flex; gap: 24px; list-style: none; }
+.f-links a { font-size: 15px; color: var(--ink-muted); text-decoration: none; transition: color 0.3s; }
+.f-links a:hover { color: var(--green); }
+
+/* ── TABLET — max 1024px ── */
+@media (max-width: 1024px) {
+  footer { padding: 32px; flex-direction: column; gap: 20px; text-align: center; }
+  .f-links { justify-content: center; }
+}
+
+/* ── MOBILE — max 640px ── */
+@media (max-width: 640px) {
+  footer { padding: 24px 16px; }
+  .f-brand { font-size: 12px; }
+  .f-addr { font-size: 11px; }
+  .f-copy { font-size: 10px; }
+  .f-links { flex-wrap: wrap; gap: 14px; }
+  .f-links a { font-size: 12px; padding: 4px 0; }
+}

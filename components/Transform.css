@@ -1,0 +1,59 @@
+/* ═══ BEFORE/AFTER — DARK ═══ */
+.transform { padding: 110px 56px; background: var(--navy); }
+.transform .sec-label { color: var(--green-glow); }
+.transform .sec-h2 { color: #fff; }
+.transform-grid {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 56px;
+}
+.t-card { border-radius: var(--radius-lg); padding: 44px 32px; text-align: center; }
+.t-before { background: rgba(209,75,58,0.06); border: 1px solid rgba(209,75,58,0.15); }
+.t-after { background: rgba(45,181,78,0.06); border: 2px solid rgba(45,181,78,0.2); }
+.t-badge {
+  display: inline-flex;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.badge-b { background: rgba(209,75,58,0.12); color: var(--coral); }
+.badge-a { background: rgba(45,181,78,0.12); color: var(--green-glow); }
+.t-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.t-list { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.t-list li { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.55); padding-left: 22px; position: relative; }
+.t-before .t-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--coral); opacity: 0.6; }
+.t-after .t-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--green); opacity: 0.8; }
+.t-arrow { font-size: 32px; color: var(--green); text-align: center; opacity: 0.3; }
+
+/* ── TABLET — max 1024px ── */
+@media (max-width: 1024px) {
+  .transform { padding: 80px 32px; }
+  .transform-grid { grid-template-columns: 1fr; gap: 16px; }
+  .t-arrow { transform: rotate(90deg); }
+}
+
+/* ── MOBILE — max 640px ── */
+@media (max-width: 640px) {
+  .transform { padding: 52px 16px; }
+  .t-card { padding: 28px 20px; }
+  .t-card h3 { font-size: 22px; }
+  .t-list { gap: 16px; }
+  .t-list li { font-size: 15px; padding-left: 28px; line-height: 1.6; }
+  .t-before .t-list li::before,
+  .t-after .t-list li::before { width: 8px; height: 8px; top: 6px; left: 0; }
+  .t-arrow { font-size: 20px; }
+}

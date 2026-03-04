@@ -1,0 +1,113 @@
+/* ═══ FINANCIALS — SAGE (uses .services bg) ═══ */
+.fin-header { text-align: center; margin-bottom: 56px; position: relative; }
+.fin-header .sec-h2 { color: var(--ink); }
+.fin-header .sec-sub { margin: 12px auto 0; max-width: 540px; color: var(--ink-muted); }
+.fin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.fin-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1.5px solid var(--stone);
+  box-shadow: var(--shadow);
+}
+.fin-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+}
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.tag-g { background: var(--green-soft); color: var(--green); }
+.tag-r { background: var(--coral-soft); color: var(--coral); }
+.fin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sand);
+  font-size: 16px;
+}
+.fin-row:last-child { border-bottom: none; }
+.fin-row .lbl { color: var(--ink-muted); }
+.fin-row .val { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 16px; }
+.val-g { color: var(--green); }
+.val-r { color: var(--coral); }
+.fin-total {
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 2px solid var(--sand-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fin-total .lbl { font-weight: 600; font-size: 17px; color: var(--ink); }
+.fin-total .val { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; }
+.fin-annual {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--green-soft);
+  border: 1.5px solid var(--green-border);
+  border-radius: 10px;
+}
+.fin-annual-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 3px;
+}
+.fin-annual-val { font-size: 13px; color: var(--ink-muted); }
+.fcf-card {
+  background: var(--green-soft);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  border: 2px solid var(--green-border);
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.fcf-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.fcf-sub { font-size: 20px; color: var(--ink-muted); margin-bottom: 16px; font-weight: 500; }
+.fcf-desc { font-size: 17px; color: var(--ink-muted); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+
+/* ── TABLET — max 1024px ── */
+@media (max-width: 1024px) {
+  .fin-grid { grid-template-columns: 1fr; }
+}
+
+/* ── MOBILE — max 640px ── */
+@media (max-width: 640px) {
+  .fin-box { padding: 24px 16px; }
+  .fin-box h3 { font-size: 19px; flex-wrap: wrap; gap: 6px; }
+  .fin-row { font-size: 14px; padding: 10px 0; }
+  .fin-row .val { font-size: 15px; }
+  .fin-total .val { font-size: 26px; }
+  .fcf-card { padding: 28px 16px; }
+  .fcf-num { font-size: 48px; }
+  .fcf-label { font-size: 12px; }
+}

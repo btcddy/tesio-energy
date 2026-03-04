@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,31 +18,28 @@ export default function Navbar() {
   const close = () => setOpen(false);
 
   const links = [
-    { href: '#services', label: 'Services' },
-    { href: '#solution', label: 'Solution' },
-    { href: '#financial', label: 'Financials' },
-    { href: '#casestudy', label: 'Case Study' },
-    { href: '#team', label: 'Team' },
-    { href: '#contact', label: 'Contact' },
-  ];
+  { label: 'Home', href: '#top' },
+  { label: 'Tax Credits', href: '#financial' },
+  { label: 'Energy Upgrades', href: '#services' },
+  { label: 'Projects', href: '#casestudy' },
+  { label: 'About Us', href: '#team' },
+];
 
   return (
     <>
       <nav>
         <div className="nav-logo">
-          <div className="logo-glyph">
-            <svg viewBox="0 0 40 40" fill="none">
-              <rect x="8" y="6" width="18" height="18" rx="2" stroke="#2DB54E" strokeWidth="2.5" fill="none" />
-              <path d="M8 28 L4 34 L14 34 Z" fill="#2DB54E" opacity="0.5" />
-              <circle cx="26" cy="26" r="3" fill="#2DB54E" />
-            </svg>
-          </div>
-          <div className="logo-wordmark">
-            <div className="logo-name">TESIO</div>
-            <div className="logo-tagline">Energy</div>
-          </div>
+          <a href="#top">
+            <Image
+              src="/logo2.png"
+              alt="TESIO Energy"
+              width={220}
+              height={77}
+              priority
+              style={{ width: 'auto', height: '66px' }}
+            />
+          </a>
         </div>
-
         <ul className="nav-links">
           {links.map((l) => (
             <li key={l.href}><a href={l.href}>{l.label}</a></li>
