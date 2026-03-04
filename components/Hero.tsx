@@ -1,37 +1,6 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero() {
-  const [navLinksLeft, setNavLinksLeft] = useState(135);
-
-  useEffect(() => {
-    const measure = () => {
-      const nav = document.querySelector('nav');
-      const navLinks = document.querySelector('.nav-links');
-      const topBar = document.querySelector('.hero-top-bar');
-      if (!nav || !navLinks || !topBar) return;
-
-      // Temporarily force scrolled layout to measure where links will be
-      const wasScrolled = nav.classList.contains('nav-scrolled');
-      if (!wasScrolled) nav.classList.add('nav-scrolled');
-
-      const offset = navLinks.getBoundingClientRect().left - topBar.getBoundingClientRect().left;
-      setNavLinksLeft(offset);
-
-      if (!wasScrolled) nav.classList.remove('nav-scrolled');
-    };
-
-    // Measure after fonts/layout settle
-    const timer = setTimeout(measure, 100);
-    window.addEventListener('resize', measure);
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', measure);
-    };
-  }, []);
-
   const links = [
     { label: 'Home', href: '#top' },
     { label: 'Tax Credits', href: '#financial' },
@@ -48,7 +17,7 @@ export default function Hero() {
           <div className="hero-line" />
           <span>Tesio Energy</span>
         </div>
-        <ul className="hero-nav-links" style={{ paddingLeft: navLinksLeft }}>
+        <ul className="hero-nav-links">
           {links.map((l) => (
             <li key={l.href}><a href={l.href}>{l.label}</a></li>
           ))}
@@ -56,8 +25,7 @@ export default function Hero() {
       </div>
       <div className="hero-content">
         <h1>
-          Roof + Solar +<br />
-          <em>Tax Incentives</em>
+          Roof + Solar + <em>Tax Incentives</em>
         </h1>
         <p className="hero-desc">
           We are financing experts helping industrial partners secure federal and state incentives to fund sustainability projects.

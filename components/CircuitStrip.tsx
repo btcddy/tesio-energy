@@ -26,47 +26,34 @@ export default function CircuitStrip() {
 
       <div className="ct-center">
         <div className="ct-ring">
-          <div className="ct-ring-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
           <div className="ct-ring-title">Liquidity</div>
-          <div className="ct-ring-num">$44M</div>
+          <div className="ct-ring-num"></div>
           <div className="ct-ring-label">Free Cash Flow</div>
         </div>
       </div>
 
       <div className="ct-card ct-card1">
-        <div className="ct-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8"/></svg>        </div>
         <div className="ct-card-title">Solar Output</div>
-        <div className="ct-card-val">35 MW</div>
-        <div className="ct-card-sub">1,535 panels active</div>
+        <div className="ct-card-val">Lower Carbon Asset</div>
+        <div className="ct-card-sub">Lower Energy Costs</div>
       </div>
 
       <div className="ct-card ct-card2">
-        <div className="ct-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>
-        </div>
         <div className="ct-card-title">Roof Coverage</div>
-        <div className="ct-card-val">4M ft²</div>
-        <div className="ct-card-sub">FiberTite membrane</div>
+        <div className="ct-card-val">Retrofit Qualifies</div>
+        <div className="ct-card-sub">When Adding Solar</div>
       </div>
 
       <div className="ct-card ct-card3">
-        <div className="ct-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M12 10v4m-2-2h4"/></svg>
-        </div>
         <div className="ct-card-title">Tax Credits</div>
-        <div className="ct-card-val">40% ITC</div>
-        <div className="ct-card-sub">Safe harbored</div>
+        <div className="ct-card-val">Safe Harbored</div>
+        <div className="ct-card-sub">Sell For Cash</div>
       </div>
-     <div className="ct-card ct-card4">
-       <div className="ct-card-icon">
-         <svg viewBox="0 0 24 24" fill="none" stroke="#D4920F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        </div>
+
+      <div className="ct-card ct-card4">
         <div className="ct-card-title">Property Value</div>
-        <div className="ct-card-val">10%</div>
-        <div className="ct-card-sub">Appreciation</div>
+        <div className="ct-card-val">Asset Appreciation </div>
+        <div className="ct-card-sub">Retain Solar Rights </div>
       </div>
     </section>
   );

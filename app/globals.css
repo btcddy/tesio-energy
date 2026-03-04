@@ -141,7 +141,6 @@ nav {
   background: rgba(15,25,35,0.92);
   backdrop-filter: blur(28px) saturate(160%);
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: justify-content 0s;
 }
 .nav-scrolled { justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 12px; }
@@ -163,26 +162,27 @@ nav {
   margin-top: 1px;
 }
 
-/* Nav links — hidden and out of flow by default, shown when scrolled past hero */
+/* Nav links — viewport-centered, hidden until scrolled past hero */
 .nav-links {
   display: flex;
   gap: 32px;
   list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
-  position: absolute;
   transition: opacity 0.3s;
 }
 .nav-scrolled .nav-links {
   opacity: 1;
   pointer-events: auto;
-  position: static;
 }
 .nav-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
   font-weight: 500;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255);
   text-decoration: none;
   transition: all 0.3s;
   position: relative;
@@ -208,7 +208,7 @@ nav {
   text-shadow: 0 0 18px rgba(61,217,98,0.6);
 }
 
-/* Nav right — out of flow when not scrolled so logo stays centered */
+/* Nav right — hidden until scrolled */
 .nav-right {
   display: flex;
   align-items: center;
@@ -216,11 +216,11 @@ nav {
   opacity: 0;
   pointer-events: none;
   position: absolute;
+  right: 56px;
 }
 .nav-scrolled .nav-right {
   opacity: 1;
   pointer-events: auto;
-  position: static;
 }
 .nav-phone {
   font-family: 'JetBrains Mono', monospace;
@@ -328,6 +328,7 @@ nav {
 @media (max-width: 1024px) {
   nav { padding: 14px 24px; justify-content: space-between; }
   .nav-links { display: none; }
+  .nav-right { display: none; }
   .nav-phone { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
