@@ -24,11 +24,19 @@ export default function CircuitStrip() {
       <div className="ct-jn ct-jn5" />
       <div className="ct-jn ct-jn6" />
 
+      <div className="ct-header">
+        <div className="ct-brand-row">
+          <div className="hero-dot" />
+          <div className="hero-line" />
+          <span>Cash Flow Opportunities</span>
+        </div>
+      </div>
+
       <div className="ct-center">
         <div className="ct-ring">
           <div className="ct-ring-title">Liquidity</div>
-          <div className="ct-ring-num"></div>
-          <div className="ct-ring-label">Free Cash Flow</div>
+          <div className="ct-ring-num">Recoup Financing & Keep Grant</div>
+          <div className="ct-ring-label">$500 - $2M</div>
         </div>
       </div>
 
@@ -46,8 +54,8 @@ export default function CircuitStrip() {
 
       <div className="ct-card ct-card3">
         <div className="ct-card-title">Tax Credits</div>
-        <div className="ct-card-val">Safe Harbored</div>
-        <div className="ct-card-sub">Sell For Cash</div>
+        <div className="ct-card-val">Apply or Sell</div>
+        <div className="ct-card-sub">To Unlock Cash</div>
       </div>
 
       <div className="ct-card ct-card4">

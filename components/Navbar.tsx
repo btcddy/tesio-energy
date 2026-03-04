@@ -44,12 +44,12 @@ export default function Navbar() {
         <div className="nav-logo">
           <a href="#top">
             <Image
-              src="/logo2.png"
+              src="/logo-horizontal-dark.png"
               alt="TESIO Energy"
-              width={220}
-              height={77}
+              width={480}
+              height={120}
               priority
-              style={{ width: 'auto', height: '66px' }}
+              style={{ width: 'auto', height: '44px' }}
             />
           </a>
         </div>

@@ -12,11 +12,6 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-top-bar">
-        <div className="hero-top-row">
-          <div className="hero-dot" />
-          <div className="hero-line" />
-          <span>Tesio Energy</span>
-        </div>
         <ul className="hero-nav-links">
           {links.map((l) => (
             <li key={l.href}><a href={l.href}>{l.label}</a></li>

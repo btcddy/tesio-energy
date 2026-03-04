@@ -12,10 +12,8 @@ export default function Footer() {
         <div className="f-copy">© 2026 Tesio Energy. All rights reserved.</div>
       </div>
       <ul className="f-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Accessibility</a></li>
-        <li><a href="#">USDA Grant Info</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/accessibility">Accessibility</a></li>
       </ul>
     </footer>
   );
