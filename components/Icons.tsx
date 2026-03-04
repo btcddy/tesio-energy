@@ -38,3 +38,20 @@ export const IconPulse = ({ stroke = '#3DD962' }: { stroke?: string }) => (
     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
   </svg>
 );
+
+export const IconAnchor = ({ stroke = '#D4920F' }: { stroke?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="5" r="3" />
+    <line x1="12" y1="8" x2="12" y2="22" />
+    <path d="M5 12H2a10 10 0 0020 0h-3" />
+  </svg>
+);
+
+export const IconGrid = ({ stroke = '#1A9E8F' }: { stroke?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="7" height="7" />
+    <rect x="14" y="3" width="7" height="7" />
+    <rect x="3" y="14" width="7" height="7" />
+    <rect x="14" y="14" width="7" height="7" />
+  </svg>
+);

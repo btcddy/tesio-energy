@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar';
 import ScrollAnimator from '@/components/ScrollAnimator';
 import Hero from '@/components/Hero';
 import CircuitStrip from '@/components/CircuitStrip';
-import Services from '@/components/Services';
 import FragmentedSolutions from '@/components/FragmentedSolutions';
+import Services from '@/components/Services';
 import Solution from '@/components/Solution';
 import Financials from '@/components/Financials';
 import Transform from '@/components/Transform';
@@ -22,8 +22,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CircuitStrip />
-      <Services />
       <FragmentedSolutions />
+      <Services />
       <Solution />
       <Financials />
       <Transform />
