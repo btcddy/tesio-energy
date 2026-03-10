@@ -28,7 +28,7 @@ export default function CircuitStrip() {
         <div className="ct-brand-row">
           <div className="hero-dot" />
           <div className="hero-line" />
-          <span>Cash Flow Opportunities</span>
+          <span>Unlock Opportunities</span>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ export default function CircuitStrip() {
 
       <div className="ct-card ct-card1">
         <div className="ct-card-title">Solar Output</div>
-        <div className="ct-card-val">Lower Carbon Asset</div>
+        <div className="ct-card-val">Low-Carbon Asset</div>
         <div className="ct-card-sub">Lower Energy Costs</div>
       </div>
 

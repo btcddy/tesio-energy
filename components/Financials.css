@@ -1,7 +1,7 @@
 /* ═══ FINANCIALS — SAGE (uses .services bg) ═══ */
 .fin-header { text-align: center; margin-bottom: 56px; position: relative; }
-.fin-header .sec-h2 { color: var(--ink); }
-.fin-header .sec-sub { margin: 12px auto 0; max-width: 540px; color: var(--ink-muted); }
+.fin-header .sec-h2 { color: #fff; }
+.fin-header .sec-sub { margin: 12px auto 0; max-width: 540px; color: #fff; }
 .fin-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

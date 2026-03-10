@@ -34,7 +34,7 @@
   line-height: 1.2;
 }
 .t-list { list-style: none; display: flex; flex-direction: column; gap: 10px; text-align: left; }
-.t-list li { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.55); padding-left: 22px; position: relative; }
+.t-list li { font-size: 17px; line-height: 1.6; color: #ffff; padding-left: 22px; position: relative; }
 .t-before .t-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--coral); opacity: 0.6; }
 .t-after .t-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--green); opacity: 0.8; }
 .t-arrow { font-size: 32px; color: var(--green); text-align: center; opacity: 0.3; }

@@ -167,6 +167,11 @@
   color: #fff;
   white-space: nowrap;
 }
+
+@media (max-width: 1024px) {
+  .frag-bottom-text { white-space: normal; }
+  .frag-bottom { width: auto; }
+}
 .frag-bottom-text strong { color: var(--coral); font-weight: 700; }
 
 /* ── TABLET — max 1024px ── */

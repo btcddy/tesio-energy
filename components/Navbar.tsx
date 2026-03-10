@@ -1,32 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image'; 
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [open]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const hero = document.querySelector('.hero');
-      if (hero) {
-        const heroBottom = hero.getBoundingClientRect().bottom;
-        setScrolled(heroBottom <= 0);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const close = () => setOpen(false);
 
@@ -40,7 +18,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={scrolled ? 'nav-scrolled' : ''}>
+      <nav className="nav-scrolled">
         <div className="nav-logo">
           <a href="#top">
             <Image
@@ -58,10 +36,7 @@ export default function Navbar() {
             <li key={l.href}><a href={l.href}>{l.label}</a></li>
           ))}
         </ul>
-
-        <div className="nav-right">
-        </div>
-
+        <div className="nav-right" />
         <button
           className={`hamburger ${open ? 'open' : ''}`}
           onClick={() => setOpen(!open)}
