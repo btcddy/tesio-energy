@@ -2,11 +2,8 @@
 .casestudy { background: var(--sand-deep); padding: 110px 56px; position: relative; }
 .casestudy .sec-h2 { color: var(--ink); }
 .cs-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 56px; }
-.cs-visual { background: var(--navy); border-radius: var(--radius-lg); aspect-ratio: 4/3; position: relative; overflow: hidden; box-shadow: var(--shadow-xl); }
-.cs-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 32px 32px; }
-.cs-panels { position: absolute; bottom: 18%; left: 50%; transform: translateX(-50%) perspective(400px) rotateX(25deg); display: grid; grid-template-columns: repeat(10, 24px); grid-template-rows: repeat(5, 14px); gap: 2px; opacity: 0.25; }
-.cs-p { background: linear-gradient(135deg, var(--green), var(--teal)); border-radius: 1px; }
-.cs-badge { position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.93); border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--green); }
+.cs-visual { border-radius: var(--radius-lg); aspect-ratio: 4/3; position: relative; overflow: hidden; box-shadow: var(--shadow-xl); }
+.cs-badge { position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.93); border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--green); z-index: 1; }
 .cs-right h3 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; color: var(--ink); }
 .cs-right h3 em { font-style: italic; color: var(--green); }
 .cs-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }

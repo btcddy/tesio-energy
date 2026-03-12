@@ -1,12 +1,5 @@
 import './CaseStudy.css';
-
-const CsPanels = () => (
-  <div className="cs-panels">
-    {Array.from({ length: 50 }).map((_, i) => (
-      <div key={i} className="cs-p" />
-    ))}
-  </div>
-);
+import Image from 'next/image';
 
 export default function CaseStudy() {
   return (
@@ -16,12 +9,16 @@ export default function CaseStudy() {
       </div>
       <div className="cs-layout">
         <div className="cs-visual anim">
-          <div className="cs-grid-bg" />
-          <CsPanels />
+          <Image
+            src="/TN photo.jpeg"
+            alt="Bristol, TN live site"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
           <div className="cs-badge">Bristol, TN — Live Site</div>
         </div>
         <div className="cs-right anim">
-          <h3>Bristol, TN<br /><em>Test Site</em></h3>
+          <h3>Bristol, TN<br /><em>Live Site</em></h3>
           <div className="cs-meta">
             <div className="cs-meta-item"><div className="cs-meta-label">Installation</div><div className="cs-meta-val">1,535 Panels</div></div>
             <div className="cs-meta-item"><div className="cs-meta-label">Current Roof</div><div className="cs-meta-val">20+ Year Old</div></div>
