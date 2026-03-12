@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(145deg, #0d151e, #131f2d);
-  height: 950px;
+  height: 1100px;
 }
 .circuit-strip::before {
   content: '';
@@ -114,7 +114,7 @@
 /* Brand header */
 .ct-header {
   position: absolute;
-  top: 28px;
+  top: 80px;
   left: 0;
   right: 0;
   display: flex;
@@ -157,7 +157,7 @@
 /* Center metric ring — 50% larger (215 → 322) */
 .ct-center {
   position: absolute;
-  top: 46%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -232,10 +232,10 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
-.ct-card1 { top: 10%; right: 5%; }
-.ct-card2 { bottom: 12%; left: 5%; }
-.ct-card3 { top: 10%; left: 5%; }
-.ct-card4 { bottom: 12%; right: 5%; }
+.ct-card1 { top: 18%; right: 20%; }
+.ct-card2 { bottom: 18%; left: 20%; }
+.ct-card3 { top: 18%; left: 20%; }
+.ct-card4 { bottom: 18%; right: 20%; }
 
 .ct-card-title {
   font-family: 'Playfair Display', serif;

@@ -4,10 +4,10 @@ import Hero from '@/components/Hero';
 import CircuitStrip from '@/components/CircuitStrip';
 import FragmentedSolutions from '@/components/FragmentedSolutions';
 import Services from '@/components/Services';
+import CaseStudy from '@/components/CaseStudy';
 import Solution from '@/components/Solution';
 import Financials from '@/components/Financials';
 import Transform from '@/components/Transform';
-import CaseStudy from '@/components/CaseStudy';
 import Partners from '@/components/Partners';
 import Team from '@/components/Team';
 import Process from '@/components/Process';
@@ -24,11 +24,11 @@ export default function Home() {
       <CircuitStrip />
       <FragmentedSolutions />
       <Services />
-      <Solution />
+      <CaseStudy />
+      {/* <Solution /> */}
       <Financials />
       <Transform />
-      <CaseStudy />
-      <Partners />
+      {/* <Partners /> */}
       <Team />
       <Process />
       <CTA />

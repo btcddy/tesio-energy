@@ -10,9 +10,9 @@ export default function Navbar() {
 
   const links = [
     { label: 'Home', href: '#top' },
-    { label: 'Tax Credits', href: '#financial' },
-    { label: 'Energy Upgrades', href: '#services' },
+    { label: 'Partners', href: '#services' },
     { label: 'Projects', href: '#casestudy' },
+    { label: 'Tax Credits', href: '#financials' },
     { label: 'About Us', href: '#team' },
   ];
 

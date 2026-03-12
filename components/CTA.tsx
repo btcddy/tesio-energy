@@ -13,8 +13,9 @@ export default function CTA() {
         <a href="mailto:randy@tesioenergy.com">randy@tesioenergy.com</a>
       </div>
       <div className="cta-btns">
-        <button className="btn-green">Schedule a Call <span className="btn-arrow">→</span></button>
-        <button className="btn-ol">Download Overview</button>
+        <a href="/Pitch Deck_V8.pdf" target="_blank" rel="noopener noreferrer" className="btn-ol">
+          Download Overview
+        </a>
       </div>
     </section>
   );
