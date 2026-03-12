@@ -8,6 +8,7 @@
   gap: 18px;
   margin-bottom: 28px;
   position: relative;
+  align-items: stretch;
 }
 .fin-box {
   background: var(--white);
@@ -15,6 +16,8 @@
   padding: 36px 32px;
   border: 1.5px solid var(--stone);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 .fin-box h3 {
   font-family: 'Playfair Display', serif;
@@ -59,22 +62,6 @@
 }
 .fin-total .lbl { font-weight: 600; font-size: 17px; color: var(--ink); }
 .fin-total .val { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; }
-.fin-annual {
-  margin-top: 20px;
-  padding: 14px 16px;
-  background: var(--green-soft);
-  border: 1.5px solid var(--green-border);
-  border-radius: 10px;
-}
-.fin-annual-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 3px;
-}
-.fin-annual-val { font-size: 13px; color: var(--ink-muted); }
 .fcf-card {
   background: var(--green-soft);
   border-radius: var(--radius-lg);

@@ -6,7 +6,7 @@ export default function Financials() {
       <div className="fin-header anim">
         <h2 className="sec-h2">$100M Project Example</h2>
         <p className="sec-sub">
-          4 million sq. ft. of existing roof retrofitted with FiberTite &amp; Solar. 6% interest, 0% down payment.
+          4 Million Sq. Ft. of Existing Roof Retrofitted with FiberTite's Premium Roofing Membrane &amp; a Solar PV System.
         </p>
       </div>
       <div className="fin-grid">
@@ -27,10 +27,6 @@ export default function Financials() {
           <div className="fin-row"><span className="lbl">Financing Interest</span><span className="val val-r">($5.4M)</span></div>
           <div className="fin-row"><span className="lbl">Principal Repayment</span><span className="val val-r">($1.7M)</span></div>
           <div className="fin-total"><span className="lbl">Total Cash Out</span><span className="val val-r">($118.5M)</span></div>
-          <div className="fin-annual">
-            <div className="fin-annual-label">Year 3+ Annual</div>
-            <div className="fin-annual-val">Cash In $6.5M · Cash Out $7.1M · Net ($600K)</div>
-          </div>
         </div>
       </div>
       <div className="fcf-card anim">

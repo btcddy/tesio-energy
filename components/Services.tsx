@@ -177,7 +177,7 @@ export default function Services() {
           <div className="svc-tesio-name">Energy</div>
           <div className="svc-tesio-divider" />
           <div className="svc-tesio-desc">
-            {'Tax equity & single-point contact for all partners'}
+            {'Tax equity & a single-point contact for all partners'}
           </div>
           <div className="svc-tesio-badge">Managing All Partners</div>
         </div>
