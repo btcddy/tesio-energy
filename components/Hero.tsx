@@ -7,12 +7,11 @@ export default function Hero() {
       <div className="hero-split">
         <div className="hero-left">
           <h1>
-            Roof + Solar + <em>Tax Incentives</em>
+            Roof + Solar +<br /><span className="hero-green">Tax Incentives</span>
           </h1>
           <p className="hero-desc">
             We are financing experts helping industrial partners secure federal and state incentives to fund sustainability projects.
           </p>
-          
         </div>
         <div className="hero-right">
           <Image

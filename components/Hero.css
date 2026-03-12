@@ -93,6 +93,9 @@
   color: var(--green);
   display: inline;
 }
+.hero-green {
+  color: var(--green);
+}
 
 /* Description */
 .hero-desc {

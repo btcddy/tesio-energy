@@ -210,6 +210,9 @@
   text-transform: uppercase;
   color: var(--green-glow);
 }
+.ct-ring-label-sm {
+  font-size: 18px;
+}
 
 /* Info cards — 50% larger */
 .ct-card {

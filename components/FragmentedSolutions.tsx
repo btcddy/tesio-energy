@@ -31,12 +31,12 @@ export default function FragmentedSolutions() {
               </defs>
             </svg>
           </div>
-          <h3>Roofing Obstacles</h3>
-          <p className="frag-desc">Treated as a heavy CapEx expense rather than an investment, with zero access to tax credits.</p>
-          <div className="frag-stat">
-            <span className="frag-stat-num">$0</span>
-            <span className="frag-stat-label">Tax credits accessed standalone</span>
-          </div>
+          <h3>Roofing Installation</h3>
+          <ul className="frag-list">
+            <li>CapEx heavy</li>
+            <li>Treated as an expense, not an investment</li>
+            <li>No access to tax credits</li>
+          </ul>
         </div>
 
         <div className="frag-card anim">
@@ -63,12 +63,12 @@ export default function FragmentedSolutions() {
               </defs>
             </svg>
           </div>
-          <h3>Solar Risks</h3>
-          <p className="frag-desc">Highly dependent on structural limits; often voids existing roof warranties.</p>
-          <div className="frag-stat">
-            <span className="frag-stat-num">!!!</span>
-            <span className="frag-stat-label">Warranty voided on install</span>
-          </div>
+          <h3>Solar Installation</h3>
+          <ul className="frag-list">
+            <li>Dependent on roof condition and structural limits</li>
+            <li>Voids roof warranties, increasing risk</li>
+            <li>Low vendor reliability</li>
+          </ul>
         </div>
 
         <div className="frag-card anim">
@@ -90,12 +90,12 @@ export default function FragmentedSolutions() {
               </defs>
             </svg>
           </div>
-          <h3>Tax Coordination</h3>
-          <p className="frag-desc">Incentives are frequently misunderstood or lost due to poor coordination with project execution.</p>
-          <div className="frag-stat">
-            <span className="frag-stat-num">40%</span>
-            <span className="frag-stat-label">ITC commonly left unclaimed</span>
-          </div>
+          <h3>Tax Incentives &amp; Financing</h3>
+          <ul className="frag-list">
+            <li>Incentives misunderstood or missed</li>
+            <li>Poor coordination with project execution</li>
+            <li>Safe-harbor and depreciation benefits lost due to delays</li>
+          </ul>
         </div>
       </div>
 

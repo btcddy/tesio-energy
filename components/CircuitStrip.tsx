@@ -35,8 +35,9 @@ export default function CircuitStrip() {
       <div className="ct-center">
         <div className="ct-ring">
           <div className="ct-ring-title">Liquidity</div>
-          <div className="ct-ring-num">Recoup Financing & Keep Grant</div>
-          <div className="ct-ring-label">$500 - $2M</div>
+          <div className="ct-ring-num">Finance & Sell Tax Benefits</div>
+          <div className="ct-ring-num">$44M</div>
+          <div className="ct-ring-label ct-ring-label-sm">Example Below</div>
         </div>
       </div>
 
@@ -60,8 +61,8 @@ export default function CircuitStrip() {
 
       <div className="ct-card ct-card4">
         <div className="ct-card-title">Property Value</div>
-        <div className="ct-card-val">Asset Appreciation </div>
-        <div className="ct-card-sub">Retain Solar Rights </div>
+        <div className="ct-card-val">Asset Appreciation</div>
+        <div className="ct-card-sub">Retain Solar Rights</div>
       </div>
     </section>
   );
