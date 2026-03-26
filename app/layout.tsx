@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'TESIO Energy',
     images: [
       {
-        url: '/logo-horizontal-dark.png',
+        url: '/Flat_roof_BLDG.png',
         width: 1200,
         height: 630,
         alt: 'TESIO Energy',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TESIO Energy — Roof + Solar + Tax Incentives at Zero Cost',
     description: 'Tesio Energy combines premium roof retrofits with solar installations and a 40% Investment Tax Credit to turn aging roofs into profit centers — at no upfront cost.',
-    images: ['/logo-horizontal-dark.png'],
+    images: ['/Flat_roof_BLDG.png'],
   },
 };
 
