@@ -11,7 +11,7 @@ export default function CaseStudy() {
         <div className="cs-visual anim">
           <Image
             src="/TN photo.jpeg"
-            alt="Bristol, TN live site"
+            alt="Bristol, TN feature site"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
