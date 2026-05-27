@@ -5,7 +5,7 @@ export default function CTA() {
     <section className="cta" id="contact">
       <h2>Ready to Transform<br />Your <em>Portfolio</em>?</h2>
       <p>
-        Don&apos;t leave millions in tax incentives on the table. Let TESIO Energy turn your aging
+        Don&apos;t leave millions in tax incentives on the table. Let Tesio Energy turn your aging
         roofs into revenue-generating assets.
       </p>
       <div className="cta-contact">
