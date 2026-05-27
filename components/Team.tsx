@@ -1,7 +1,7 @@
 import './Team.css';
 export default function Team() {
   const members = [
-    { img: '/Randy Headshot.jpg', name: 'Randy Perry', role: 'Partner', bio: 'Randy has 10+ years in corporate project management and tax consulting. Master\'s in International Accounting from University of London. Leads on-site execution and financial ROI presentations.' },
+    { img: '/Randy Headshot.jpg', name: 'Randy Perry', role: 'Partner', bio: 'Randy has 10+ years in corporate project management and tax consulting. He develops all financial models and leads on-site execution. Randy has a Master\'s in International Accounting from University of London.' },
     { img: '/Ben Pauluhn.jpg', name: 'Ben Pauluhn', role: 'President — Optimus Energy Solutions', bio: 'Ben is passionate about the Solar, EV, and other Energy Efficiency industries. He has built his career serving others through many business and non-profit ventures and is humbled by the opportunity to educate businesses on the future of renewable energy solutions.' },
     { img: '/Rick Mariucci.jpg', name: 'Rick Mariucci', role: 'Senior Project Manager — Optimus Energy Solutions', bio: 'Rick draws on a career in construction-based customer-service to bring projects to life. Rick leads project implementation throughout Florida, Georgia, and Tennessee. His client-first approach and commitment to quality ensure projects are brought to life that ensure longevity and transparency.' },
   ];
