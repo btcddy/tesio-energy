@@ -15,12 +15,12 @@ export default function CaseStudy() {
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-          <div className="cs-badge">Bristol, TN — Live Site</div>
+          <div className="cs-badge">Bristol, TN — Feature Site</div>
         </div>
         <div className="cs-right anim">
           <h3>Bristol, TN<br /><em>Live Site</em></h3>
           <div className="cs-meta">
-            <div className="cs-meta-item"><div className="cs-meta-label">Installation</div><div className="cs-meta-val">1,535 Panels</div></div>
+            <div className="cs-meta-item"><div className="cs-meta-label">Installation</div><div className="cs-meta-val">1,630 Panels</div></div>
             <div className="cs-meta-item"><div className="cs-meta-label">Current Roof</div><div className="cs-meta-val">20+ Year Old</div></div>
             <div className="cs-meta-item"><div className="cs-meta-label">Roof System</div><div className="cs-meta-val">FiberTite KEE</div></div>
             <div className="cs-meta-item"><div className="cs-meta-label">Scope</div><div className="cs-meta-val">Solar + Retrofit</div></div>
