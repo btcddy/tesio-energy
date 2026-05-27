@@ -15,7 +15,7 @@ export default function CaseStudy() {
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-          <div className="cs-badge">Bristol, TN — Feature Site</div>
+          <div className="cs-badge">Bristol, TN — Feature Site </div>
         </div>
         <div className="cs-right anim">
           <h3>Bristol, TN<br /><em>Live Site</em></h3>
