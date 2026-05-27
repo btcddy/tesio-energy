@@ -18,7 +18,7 @@ export default function CaseStudy() {
           <div className="cs-badge">Bristol, TN — Feature Site </div>
         </div>
         <div className="cs-right anim">
-          <h3>Bristol, TN<br /><em>Live Site</em></h3>
+          <h3>Bristol, TN<br /><em>Feature Site</em></h3>
           <div className="cs-meta">
             <div className="cs-meta-item"><div className="cs-meta-label">Installation</div><div className="cs-meta-val">1,630 Panels</div></div>
             <div className="cs-meta-item"><div className="cs-meta-label">Current Roof</div><div className="cs-meta-val">20+ Year Old</div></div>
