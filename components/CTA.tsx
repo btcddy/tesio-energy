@@ -9,7 +9,7 @@ export default function CTA() {
         roofs into revenue-generating assets.
       </p>
       <div className="cta-contact">
-        Randy Perry · <a href="tel:7275980202">727-598-0202</a> ·{' '}
+        Randy Perry ·{' '}
         <a href="mailto:randy@tesioenergy.com">randy@tesioenergy.com</a>
       </div>
       <div className="cta-btns">
